@@ -38,8 +38,8 @@ ROOT_URLCONF = 'agrinuture.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [],  # Leave this empty unless you have custom template dirs
+        'APP_DIRS': True,  # ✅ This allows Django to look inside app_name/templates/
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.request',
@@ -49,6 +49,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'agrinuture.wsgi.application'
 
