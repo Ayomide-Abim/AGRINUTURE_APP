@@ -6,22 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agri Nuture Limited</title>
   <link rel="stylesheet" href="{% static 'core/css/styles.css' %}" />
-
-  {% block extra_css %}
-  {% endblock %}
 </head>
 <body>
-
-  <header>
-    <h1>Agri Nuture Limited</h1>
+  <header class="sticky-header">
+  <div class="nav-container">
+    <div class="logo">Agric Nurture</div>
     <nav>
       <ul>
-        <li><a href="{% url 'index' %}">Home</a></li>
-        <li><a href="{% url 'about' %}">About Us</a></li>
-        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
   <main>
     {% block content %}
@@ -29,12 +28,12 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Agri Nuture Limited. All rights reserved.</p>
+    <p>&copy; Agric Nurture Limited. All rights reserved.</p>
   </footer>
 
   {% block extra_js %}
-    <script src="{% static 'core/js/scripts.js' %}"></script>
-  {% endblock %}
+  <script src="{% static 'core/js/scripts.js' %}"></script>
+{% endblock %}
+
 </body>
 </html>
-

@@ -1,17 +1,95 @@
-
 {% extends 'core/base.html' %}
 {% load static %}
-{% block extra_css %}
-  <link rel="stylesheet" href="{% static 'core/css/styles.css' %}">
-{% endblock %}
 
 {% block content %}
-  <section class="hero">
-    <h2>Welcome to Agri Nuture Limited</h2>
-    <p>From soil to shelf, transforming agriculture into impact-driven enterprise in Africa.</p>
-  </section>
-{% endblock %}
 
-{% block extra_js %}
-  <script src="{% static 'core/js/scripts.js' %}"></script>
+<!-- Hero Section -->
+<div class="hero-img">
+  <div class="hero-text">
+    <h2>Welcome to Agric Nurture Limited</h2>
+    <p>From soil to shelf, transforming agriculture into impact-driven enterprise.</p>
+    <a href="#about" class="cta-button">Get Started</a>
+  </div>
+</div>
+
+<!-- About Us -->
+<section class="about fade-in container" id="about">
+  <h2>About Us</h2>
+  <p>
+    At Agric Nurture Limited, we are redefining agriculture through innovation, sustainability, and value-added processing.
+    From cultivating nutrient-rich crops to transforming raw produce into market-ready goods, we empower communities and nurture growth.
+  </p>
+</section>
+
+<!-- Services -->
+<section class="services fade-in container" id="services">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="{% static 'core/images/agro_sales.png' %}" alt="Agro Produce" />
+      <h3>Agro Produce Sales</h3>
+      <p>Supplying fresh, locally-grown produce to markets and businesses.</p>
+    </div>
+    <div class="service-card">
+      <img src="{% static 'core/images/processing.png' %}" alt="Processing" />
+      <h3>Food Processing</h3>
+      <p>Transforming raw crops into nutritious, high-quality food products.</p>
+    </div>
+    <div class="service-card">
+      <img src="{% static 'core/images/distribution.png' %}" alt="Distribution" />
+      <h3>Distribution</h3>
+      <p>Efficient and reliable supply chain to reach every customer segment.</p>
+    </div>
+    <div class="service-card">
+      <img src="{% static 'core/images/agritech.png' %}" alt="Agri-Tech" />
+      <h3>Agri-Tech Solutions</h3>
+      <p>Innovative tech tools that empower farmers and optimize productivity.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Team Section -->
+<section class="team fade-in container" id="team">
+  <h2>Meet Our Team</h2>
+  <div class="team-grid">
+    <div class="team-member">
+      <img src="{% static 'core/images/team1.jpg' %}" alt="Ayomide Adeleke">
+      <h4>Ayomide Adeleke</h4>
+      <p>CEO – Visionary leader passionate about sustainable agriculture.</p>
+    </div>
+    <div class="team-member">
+      <img src="{% static 'core/images/team2.jpg' %}" alt="John Smith">
+      <h4>John Smith</h4>
+      <p>COO – Expert in operations and agri-supply chains.</p>
+    </div>
+    <div class="team-member">
+      <img src="{% static 'core/images/team3.jpg' %}" alt="Mary Johnson">
+      <h4>Mary Johnson</h4>
+      <p>Head of Processing – Quality-driven food technologist.</p>
+    </div>
+    <div class="team-member">
+      <img src="{% static 'core/images/team4.jpg' %}" alt="Bimbo Adeleke">
+      <h4>Bimbo Adeleke</h4>
+      <p>Marketing Lead – Amplifying brand visibility and reach.</p>
+    </div>
+    <div class="team-member">
+      <img src="{% static 'core/images/team5.jpg' %}" alt="Grace Adebayo">
+      <h4>Grace Adebayo</h4>
+      <p>Field Agronomist – Driving farm productivity with innovation.</p>
+    </div>
+    <div class="team-member">
+      <img src="{% static 'core/images/team6.jpg' %}" alt="Samuel Nwosu">
+      <h4>Samuel Nwosu</h4>
+      <p>Finance Manager – Ensuring efficient resource allocation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact fade-in container" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@agricnurture.com</p>
+  <p>Phone: +234-813-709-5349</p>
+</section>
+
 {% endblock %}
