@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="hero-img">
+  <div class="hero-text">
+    <h2>Our Services</h2>
+    <p>From farm to fork — delivering value across the entire agricultural chain.</p>
+  </div>
+</div>
+
+<section class="services container fade-in">
+  <div class="services-grid">
+    <div class="card">
+      <img src="{% static 'core/images/service-agro.jpg' %}" alt="Agro Produce">
+      <h4>Agro Produce Sales</h4>
+      <p>Supplying freshly harvested, high-quality produce sourced from our partner farms.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'core/images/service-processing.jpg' %}" alt="Processing">
+      <h4>Food Processing</h4>
+      <p>Value-added transformation of raw produce into shelf-ready consumer goods.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'core/images/service-distribution.jpg' %}" alt="Distribution">
+      <h4>Distribution</h4>
+      <p>Efficient and traceable supply chain management to ensure product availability nationwide.</p>
+    </div>
+    <div class="card">
+      <img src="{% static 'core/images/service-agritech.jpg' %}" alt="AgriTech">
+      <h4>AgriTech Solutions</h4>
+      <p>Leveraging technology for smart farming, data-driven decision making, and market access.</p>
+    </div>
+  </div>
+</section>
+
+<section class="container cta-section fade-in">
+  <a href="{% url 'contact' %}" class="cta-button">Get In Touch</a>
+</section>
+{% endblock %}
+

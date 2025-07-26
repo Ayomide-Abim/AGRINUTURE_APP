@@ -19,6 +19,7 @@
     At Agric Nurture Limited, we are redefining agriculture through innovation, sustainability, and value-added processing.
     From cultivating nutrient-rich crops to transforming raw produce into market-ready goods, we empower communities and nurture growth.
   </p>
+  <a href="{% url 'about' %}" class="cta-button">Learn More</a>
 </section>
 
 <!-- Services -->
@@ -46,6 +47,7 @@
       <p>Innovative tech tools that empower farmers and optimize productivity.</p>
     </div>
   </div>
+  <a href="{% url 'services' %}" class="cta-button">View All Services</a>
 </section>
 
 <!-- Team Section -->
@@ -92,4 +94,8 @@
   <p>Phone: +234-813-709-5349</p>
 </section>
 
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'core/js/scripts.js' %}"></script>
 {% endblock %}
