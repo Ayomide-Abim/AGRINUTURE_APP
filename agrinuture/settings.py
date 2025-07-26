@@ -102,3 +102,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 from django.contrib import admin
 
 
+'django.template.context_processors.request',
