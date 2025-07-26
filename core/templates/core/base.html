@@ -27,11 +27,11 @@
     {% endblock %}
   </main>
 
-<footer class="footer">
-  <div class="footer-grid container">
+<<footer class="footer fade-up">
+  <div class="footer-wrapper container">
     <div class="footer-col brand">
       <h3>Agric Nurture</h3>
-      <p>Empowering agriculture through innovation and value-driven solutions. From farms to families, we grow Africa’s future.</p>
+      <p>Empowering agriculture through innovation and value-driven solutions.</p>
     </div>
 
     <div class="footer-col">
@@ -39,7 +39,7 @@
       <ul>
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'about' %}">About Us</a></li>
-        <li><a href="{% url 'services' %}">Our Services</a></li>
+        <li><a href="{% url 'services' %}">Services</a></li>
         <li><a href="{% url 'contact' %}">Contact</a></li>
       </ul>
     </div>
@@ -47,8 +47,8 @@
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li>Email: info@agricnurture.com</li>
-        <li>Phone: +234-813-709-5349</li>
+        <li>info@agricnurture.com</li>
+        <li>+234-813-709-5349</li>
         <li>Lagos, Nigeria</li>
       </ul>
     </div>
@@ -56,10 +56,10 @@
     <div class="footer-col">
       <h4>Follow Us</h4>
       <div class="social-icons">
-        <a href="#"><img src="{% static 'core/icons/facebook.svg' %}" alt="Facebook"></a>
-        <a href="#"><img src="{% static 'core/icons/twitter.svg' %}" alt="Twitter"></a>
-        <a href="#"><img src="{% static 'core/icons/linkedin.svg' %}" alt="LinkedIn"></a>
-        <a href="#"><img src="{% static 'core/icons/instagram.svg' %}" alt="Instagram"></a>
+        <a href="#"><img src="{% static 'core/icons/facebook.svg' %}" alt="Facebook" /></a>
+        <a href="#"><img src="{% static 'core/icons/twitter.svg' %}" alt="Twitter" /></a>
+        <a href="#"><img src="{% static 'core/icons/linkedin.svg' %}" alt="LinkedIn" /></a>
+        <a href="#"><img src="{% static 'core/icons/instagram.svg' %}" alt="Instagram" /></a>
       </div>
     </div>
   </div>
@@ -68,6 +68,12 @@
     <p>&copy; {{ now.year }} Agric Nurture Limited. All rights reserved.</p>
   </div>
 </footer>
+
+<!-- Sticky Contact Bar -->
+<div class="sticky-footer">
+  <a href="{% url 'contact' %}" class="sticky-btn">📞 Contact Us</a>
+</div>
+
 
   {% block extra_js %}
   <script src="{% static 'core/js/scripts.js' %}"></script>
