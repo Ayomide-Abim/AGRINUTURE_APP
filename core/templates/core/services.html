@@ -9,30 +9,36 @@
   </div>
 </div>
 
-<section class="services container fade-in">
-  <div class="services-grid">
-    <div class="card">
-      <img src="{% static 'core/images/service-agro.jpg' %}" alt="Agro Produce">
-      <h4>Agro Produce Sales</h4>
-      <p>Supplying freshly harvested, high-quality produce sourced from our partner farms.</p>
+<section class="services-section fade-in" id="services">
+  <div class="container">
+    <h2>Our Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="{% static 'core/images/agro-sales.png' %}" alt="Agro Sales Icon">
+        <h4>Agro Produce Sales</h4>
+        <p>Supplying farm-fresh produce to businesses and homes with guaranteed quality.</p>
+      </div>
+      <div class="service-card">
+        <img src="{% static 'core/images/processing.png' %}" alt="Processing Icon">
+        <h4>Food Processing</h4>
+        <p>Transforming raw crops into nutritious, market-ready food products.</p>
+      </div>
+      <div class="service-card">
+        <img src="{% static 'core/images/distribution.png' %}" alt="Distribution Icon">
+        <h4>Distribution</h4>
+        <p>Efficient distribution from our hubs to consumers, nationwide.</p>
+      </div>
+      <div class="service-card">
+        <img src="{% static 'core/images/agritech.png' %}" alt="Agri-Tech Icon">
+        <h4>Agri-Tech Solutions</h4>
+        <p>Technology-driven farming, automation, and advisory for modern agribusiness.</p>
+      </div>
     </div>
-    <div class="card">
-      <img src="{% static 'core/images/service-processing.jpg' %}" alt="Processing">
-      <h4>Food Processing</h4>
-      <p>Value-added transformation of raw produce into shelf-ready consumer goods.</p>
-    </div>
-    <div class="card">
-      <img src="{% static 'core/images/service-distribution.jpg' %}" alt="Distribution">
-      <h4>Distribution</h4>
-      <p>Efficient and traceable supply chain management to ensure product availability nationwide.</p>
-    </div>
-    <div class="card">
-      <img src="{% static 'core/images/service-agritech.jpg' %}" alt="AgriTech">
-      <h4>AgriTech Solutions</h4>
-      <p>Leveraging technology for smart farming, data-driven decision making, and market access.</p>
-    </div>
+    <a href="{% url 'services' %}" class="cta-button center">See All Services</a>
   </div>
 </section>
+
+
 
 <section class="container cta-section fade-in">
   <a href="{% url 'contact' %}" class="cta-button">Get In Touch</a>

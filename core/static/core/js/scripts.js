@@ -30,3 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
     observer.observe(fade);
   });
 });
+
+window.addEventListener("scroll", function () {
+  const header = document.getElementById("main-header");
+  if (window.scrollY > 50) {
+    header.classList.add("shrunk");
+  } else {
+    header.classList.remove("shrunk");
+  }
+});
