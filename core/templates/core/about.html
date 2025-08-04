@@ -54,35 +54,66 @@
     <p class="section-subtitle">The minds behind Prime Nurture’s vision and growth</p>
 
     <div class="team-grid">
-      <div class="team-member-card">
+      {% comment %} Team Member 1 {% endcomment %}
+      <div class="team-member-card" onclick="openModal('modal-ayomide')">
         <img src="{% static 'core/images/team1.jpg' %}" alt="Ayomide Adeleke">
         <h4>Ayomide Adeleke</h4>
         <p class="role">Founder & CEO</p>
-        <p class="bio">Visionary leader with a passion for agriculture, sustainability, and innovation.</p>
       </div>
 
-      <div class="team-member-card">
+      <div class="team-member-card" onclick="openModal('modal-john')">
         <img src="{% static 'core/images/team2.jpg' %}" alt="John Smith">
         <h4>John Smith</h4>
         <p class="role">Chief Operating Officer</p>
-        <p class="bio">Operational strategist ensuring efficient farm-to-market execution.</p>
       </div>
 
-      <div class="team-member-card">
+      <div class="team-member-card" onclick="openModal('modal-mary')">
         <img src="{% static 'core/images/team3.jpg' %}" alt="Mary Johnson">
         <h4>Mary Johnson</h4>
         <p class="role">Head of Processing</p>
-        <p class="bio">Expert in agri-processing and food safety, leading our transformation team.</p>
       </div>
 
-      <div class="team-member-card">
+      <div class="team-member-card" onclick="openModal('modal-samuel')">
         <img src="{% static 'core/images/team4.jpg' %}" alt="Samuel Okoro">
         <h4>Samuel Okoro</h4>
         <p class="role">CTO</p>
-        <p class="bio">Driving AgriTech solutions and data-led innovations at Prime Nurture.</p>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Modals for each team member -->
+<div id="modal-ayomide" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('modal-ayomide')">&times;</span>
+    <h3>Ayomide Adeleke – Founder & CEO</h3>
+    <p>Ayomide leads Prime Nurture with a deep understanding of sustainable agriculture and enterprise development. With years of experience in agribusiness transformation, he drives the company’s innovation and long-term vision.</p>
+  </div>
+</div>
+
+<div id="modal-john" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('modal-john')">&times;</span>
+    <h3>John Smith – COO</h3>
+    <p>John oversees operational efficiency across our farm-to-consumer pipeline. He ensures the smooth coordination of teams, logistics, and compliance with standards at every step.</p>
+  </div>
+</div>
+
+<div id="modal-mary" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('modal-mary')">&times;</span>
+    <h3>Mary Johnson – Head of Processing</h3>
+    <p>Mary brings decades of experience in food technology, leading our processing division with innovation and precision. She ensures that Prime Nurture products are both healthy and scalable.</p>
+  </div>
+</div>
+
+<div id="modal-samuel" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal('modal-samuel')">&times;</span>
+    <h3>Samuel Okoro – CTO</h3>
+    <p>Samuel heads our AgriTech initiatives, embedding data and technology into every stage of farming and production. His expertise in software and precision agriculture drives digital transformation at Prime Nurture.</p>
+  </div>
+</div>
+
 
 {% endblock %}
