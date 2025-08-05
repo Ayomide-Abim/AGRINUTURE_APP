@@ -4,44 +4,51 @@
 {% block content %}
 <section class="contact-page fade-in">
   <div class="container contact-wrapper">
+    <!-- Left side: Form -->
     <div class="form-section">
       <h2>Contact Us</h2>
-      <p class="intro">We’d love to hear from you — whether you’re reaching out for inquiries, collaborations, or partnerships.</p>
+      <p class="intro">We wouldd love to hear from you — whether you are reaching out for inquiries, collaborations, or partnerships.</p>
 
       <form id="contactForm" method="POST" novalidate>
         {% csrf_token %}
 
-        {% if form.non_field_errors %}
-          <div class="form-errors">
-            {{ form.non_field_errors }}
-          </div>
-        {% endif %}
+        <div class="form-group">
+          <label for="name"></label>
+          <input type="text" id="name" name="name" placeholder="Your Name" maxlength="100" required>
+        </div>
 
         <div class="form-group">
-          {{ form.name.errors }}
-          {{ form.name }}
+          <label for="email"></label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
         </div>
+
         <div class="form-group">
-          {{ form.email.errors }}
-          {{ form.email }}
+          <label for="phone"></label>
+          <input type="text" id="phone" name="phone" placeholder="Your Phone Number" maxlength="11" required>
         </div>
+
         <div class="form-group">
-          {{ form.phone.errors }}
-          {{ form.phone }}
+          <label for="subject"></label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" maxlength="200" required>
         </div>
+
         <div class="form-group">
-          {{ form.subject.errors }}
-          {{ form.subject }}
+          <label for="message"></label>
+          <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
         </div>
+
         <div class="form-group">
-          {{ form.message.errors }}
-          {{ form.message }}
+          <label for="consent">
+            <input type="checkbox" id="consent" name="consent" required>
+            I consent to the processing of my personal data in accordance with the Privacy Policy.
+          </label>
         </div>
 
         <button type="submit" class="btn-submit">Send Message</button>
       </form>
     </div>
 
+    <!-- Right side: Image -->
     <div class="image-section">
       <img src="{% static 'core/images/contact-side.jpg' %}" alt="Contact Illustration" />
     </div>
